@@ -1,9 +1,9 @@
-ENV = "dev"
-PROJECT = "roboshop"
-VPC_CIDR = "10.50.0.0/16"
-PUBLIC_SUBNETS_CIDR = ["10.50.0.0/24", "10.50.1.0/24"]
+ENV                  = "dev"
+PROJECT              = "roboshop"
+VPC_CIDR             = "10.50.0.0/16"
+PUBLIC_SUBNETS_CIDR  = ["10.50.0.0/24", "10.50.1.0/24"]
 PRIVATE_SUBNETS_CIDR = ["10.50.2.0/24", "10.50.3.0/24"]
-AZ = ["us-east-1a", "us-east-1b"]
-DEFAULT_VPC_ID = "vpc-08ae3a8067de96ca7"
-DEFAULT_VPC_CIDR = "172.31.0.0/16"
-DEFAULT_VPC_RT = "rtb-011e9e7cc92a06753"
+AZ                   = ["us-east-1a", "us-east-1b"]
+DEFAULT_VPC_ID       = "vpc-08ae3a8067de96ca7"
+DEFAULT_VPC_CIDR     = "172.31.0.0/16"
+DEFAULT_VPC_RT       = "rtb-011e9e7cc92a06753"
