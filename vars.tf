@@ -22,7 +22,4 @@ variable "DOCDB_ENGINE" {}
 variable "DOCDB_ENGINE_VERSION" {}
 variable "INSTANCE_CLASS" {}
 variable "DOCDB_PG_FAMILY" {}
-variable "PRIVATE_SUBNET_IDS" {}
-variable "VPC_ID" {}
 variable "PORT" {}
-variable "ALLOW_SG_CIDR" {}
