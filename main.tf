@@ -15,15 +15,15 @@ module "VPC" {
 
 // MODULE RDS
 module "RDS" {
-  source = "github.com/dailypractice-all/tf-module-rds"
-  ENV = var.ENV
-  PROJECT = var.PROJECT
-  ENGINE = var.ENGINE
-  ENGINE_VERSION = var.ENGINE_VERSION
-  INSTANCE_CLASS = var.RDS_INSTANCE_CLASS
-  PG_FAMILY = var.PG_FAMILY
+  source             = "github.com/dailypractice-all/tf-module-rds"
+  ENV                = var.ENV
+  PROJECT            = var.PROJECT
+  ENGINE             = var.ENGINE
+  ENGINE_VERSION     = var.ENGINE_VERSION
+  RDS_INSTANCE_CLASS = var.RDS_INSTANCE_CLASS
+  PG_FAMILY          = var.PG_FAMILY
   PRIVATE_SUBNET_IDS = module.VPC.PRIVATE_SUBNET_IDS
-  VPC_ID = module.VPC.VPC_ID
-  RDS_PORT = var.RDS_PORT
-  ALLOW_SG_CIDR = module.VPC.PRIVATE_SUBNET_CIDS
+  VPC_ID             = module.VPC.VPC_ID
+  RDS_PORT           = var.RDS_PORT
+  ALLOW_SG_CIDR      = module.VPC.PRIVATE_SUBNET_CIDS
 }
