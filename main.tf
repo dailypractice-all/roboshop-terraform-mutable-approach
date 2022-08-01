@@ -30,15 +30,15 @@ module "RDS" {
 
 // MODULE DOCDB
 module "DOCDB" {
-  source             = "github.com/dailypractice-all/tf-module-docdb"
-  ENV                = var.ENV
-  PROJECT            = var.PROJECT
-  DOCDB_ENGINE       = var.DOCDB_ENGINE
+  source               = "github.com/dailypractice-all/tf-module-docdb"
+  ENV                  = var.ENV
+  PROJECT              = var.PROJECT
+  DOCDB_ENGINE         = var.DOCDB_ENGINE
   DOCDB_ENGINE_VERSION = var.DOCDB_ENGINE_VERSION
-  INSTANCE_CLASS = var.DOCDB_INSTANCE_CLASS
-  DOCDB_PG_FAMILY     = var.DOCDB_PG_FAMILY
-  PRIVATE_SUBNET_IDS = module.VPC.PRIVATE_SUBNET_IDS
-  VPC_ID             = module.VPC.VPC_ID
-  PORT          = var.DOCDB_PORT
-  ALLOW_SG_CIDR      = module.VPC.PRIVATE_SUBNET_CIDR
+  INSTANCE_CLASS       = var.INSTANCE_CLASS
+  DOCDB_PG_FAMILY      = var.DOCDB_PG_FAMILY
+  PRIVATE_SUBNET_IDS   = module.VPC.PRIVATE_SUBNET_IDS
+  VPC_ID               = module.VPC.VPC_ID
+  PORT                 = var.PORT
+  ALLOW_SG_CIDR        = module.VPC.PRIVATE_SUBNET_CIDR
 }
