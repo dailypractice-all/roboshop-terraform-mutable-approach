@@ -13,7 +13,7 @@ DEFAULT_VPC_RT       = "rtb-011e9e7cc92a06753"
 // RDS
 ENGINE = "mysql"
 ENGINE_VERSION = "5.7"
-INSTANCE_CLASS = "db.t3.micro"
+RDS_INSTANCE_CLASS = "db.t3.micro"
 PG_FAMILY = "mysql5.7"
 RDS_PORT = 3306
 //ALLOW_SG_CIDR
