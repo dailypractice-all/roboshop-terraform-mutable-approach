@@ -20,6 +20,15 @@ variable "RDS_PORT" {}
 //DOCDB
 variable "DOCDB_ENGINE" {}
 variable "DOCDB_ENGINE_VERSION" {}
-variable "INSTANCE_CLASS" {}
+variable "DOCDB_INSTANCE_CLASS" {}
 variable "DOCDB_PG_FAMILY" {}
-variable "PORT" {}
+variable "DOCDB_PORT" {}
+variable "DOCDB_NUMBER_OF_NODES" {}
+
+//ELASTICACHE
+variable "ELASTICCACHE_ENGINE" {}
+variable "ELASTICCACHE_ENGINE_VERSION" {}
+variable "ELASTICCACHE_INSTANCE_CLASS" {}
+variable "ELASTICCACHE_PG_FAMILY" {}
+variable "ELASTICCACHE_PORT" {}
+variable "ELASTICCACHE_NUMBER_OF_NODES" {}

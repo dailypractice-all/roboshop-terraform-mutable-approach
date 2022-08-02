@@ -35,10 +35,27 @@ module "DOCDB" {
   PROJECT              = var.PROJECT
   ENGINE               = var.DOCDB_ENGINE
   ENGINE_VERSION       = var.DOCDB_ENGINE_VERSION
-  INSTANCE_CLASS       = var.INSTANCE_CLASS
+  INSTANCE_CLASS       = var.DOCDB_INSTANCE_CLASS
   PG_FAMILY            = var.DOCDB_PG_FAMILY
   PRIVATE_SUBNET_IDS   = module.VPC.PRIVATE_SUBNET_IDS
   VPC_ID               = module.VPC.VPC_ID
-  PORT                 = var.PORT
+  PORT                 = var.DOCDB_PORT
   ALLOW_SG_CIDR        = module.VPC.PRIVATE_SUBNET_CIDR
+  NUMBER_OF_NODES      = var.DOCDB_NUMBER_OF_NODES
+}
+
+// MODULE ELASTICACHE
+module "ELASTICACHE" {
+  source               = "github.com/dailypractice-all/tf-module-elasticache"
+  ENV                  = var.ENV
+  PROJECT              = var.PROJECT
+  ENGINE               = var.ELASTICCACHE_ENGINE
+  ENGINE_VERSION       = var.ELASTICCACHE_ENGINE_VERSION
+  INSTANCE_CLASS       = var.ELASTICCACHE_INSTANCE_CLASS
+  PG_FAMILY            = var.ELASTICCACHE_PG_FAMILY
+  PRIVATE_SUBNET_IDS   = module.VPC.PRIVATE_SUBNET_IDS
+  VPC_ID               = module.VPC.VPC_ID
+  PORT                 = var.ELASTICCACHE_PORT
+  ALLOW_SG_CIDR        = module.VPC.PRIVATE_SUBNET_CIDR
+  NUMBER_OF_NODES      = var.ELASTICCACHE_NUMBER_OF_NODES
 }
