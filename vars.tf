@@ -17,9 +17,9 @@ variable "RDS_INSTANCE_CLASS" {}
 variable "RDS_PG_FAMILY" {}
 variable "RDS_PORT" {}
 
-//DOCDB
-variable "DOCDB_ENGINE" {}
-variable "DOCDB_ENGINE_VERSION" {}
-variable "INSTANCE_CLASS" {}
-variable "DOCDB_PG_FAMILY" {}
-variable "PORT" {}
+#//DOCDB
+#variable "DOCDB_ENGINE" {}
+#variable "DOCDB_ENGINE_VERSION" {}
+#variable "INSTANCE_CLASS" {}
+#variable "DOCDB_PG_FAMILY" {}
+#variable "PORT" {}
