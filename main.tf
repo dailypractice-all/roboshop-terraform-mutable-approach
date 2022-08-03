@@ -75,7 +75,7 @@ module "RABBITMQ" {
 
 // MODULE LB
 module "LB" {
-  source               = "github.com/dailypractice-all/tf-module-lb"
+  source               = "github.com/dailypractice-all/tf-module-mutable-lb"
   ENV                  = var.ENV
   PROJECT              = var.PROJECT
   PRIVATE_SUBNET_IDS   = module.VPC.PRIVATE_SUBNET_IDS
