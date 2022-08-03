@@ -39,7 +39,7 @@ variable "ELASTICACHE_NUMBER_OF_NODES" {}
 variable "RABBITMQ_INSTANCE_TYPE" {}
 variable "RABBITMQ_PORT" {}
 
-//LOADBALANCER
+//LB
 variable "PRIVATE_SUBNET_IDS" {}
 variable "PUBLIC_SUBNET_IDS" {}
 variable "VPC_ID" {}
