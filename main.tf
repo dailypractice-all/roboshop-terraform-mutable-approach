@@ -74,7 +74,7 @@ module "RABBITMQ" {
 }
 
 // MODULE LOADBALANCER
-MODULE "LB" {
+MODULE "LOADBALANCER" {
   source               = "github.com/dailypractice-all/tf-module-loadbalancer"
   ENV                  = var.ENV
   PROJECT              = var.PROJECT
