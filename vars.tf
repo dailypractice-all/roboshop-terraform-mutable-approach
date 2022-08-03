@@ -35,13 +35,5 @@ variable "ELASTICACHE_PORT" {}
 variable "ELASTICACHE_NUMBER_OF_NODES" {}
 
 //RABBITMQ
-
 variable "RABBITMQ_INSTANCE_TYPE" {}
 variable "RABBITMQ_PORT" {}
-
-//LB
-variable "PRIVATE_SUBNET_IDS" {}
-variable "PUBLIC_SUBNET_IDS" {}
-variable "VPC_ID" {}
-variable "PORT" {}
-variable "ALLOW_SG_CIDR" {}
