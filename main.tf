@@ -72,3 +72,14 @@ module "RABBITMQ" {
   INSTANCE_TYPE        = var.RABBITMQ_INSTANCE_TYPE
   WORKSTATION_IP       = var.WORKSTATION_IP
 }
+
+// MODULE LOADBALANCER
+MODULE "LB" {
+  source               = "github.com/dailypractice-all/tf-module-loadbalancer"
+  ENV                  = var.ENV
+  PROJECT              = var.PROJECT
+  PRIVATE_SUBNET_IDS   = module.VPC.PRIVATE_SUBNET_IDS
+  PUBLIC_SUBNET_IDS    = module.VPC.PUBLIC_SUBNET_IDS
+  VPC_ID               = module.VPC.VPC_ID
+  ALLOW_SG_CIDR        = module.VPC.PRIVATE_SUBNET_CIDR
+}
