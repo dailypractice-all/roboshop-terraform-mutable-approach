@@ -99,3 +99,83 @@ module "FRONTEND" {
   INSTANCE_COUNT     = var.INSTANCE_COUNT["FRONTEND"]["COUNT"]
   LB_ARN             = module.LB.PUBLIC_LB_ARN
 }
+
+// MODULE CART
+module "CART" {
+  source             = "github.com/dailypractice-all/tf-module-mutable-approach-app"
+  ENV                = var.ENV
+  PROJECT            = var.PROJECT
+  PRIVATE_SUBNET_IDS = module.VPC.PRIVATE_SUBNET_IDS
+  VPC_ID             = module.VPC.VPC_ID
+  ALLOW_SG_CIDR      = module.VPC.PRIVATE_SUBNET_CIDR
+  PORT               = 8080
+  COMPONENT          = "cart"
+  INSTANCE_TYPE      = "t3.micro"
+  WORKSTATION_IP     = var.WORKSTATION_IP
+  INSTANCE_COUNT     = var.INSTANCE_COUNT["CART"]["COUNT"]
+  LB_ARN             = module.LB.PRIVATE_LB_ARN
+}
+
+// MODULE CATALOGUE
+module "CATALOGUE" {
+  source             = "github.com/dailypractice-all/tf-module-mutable-approach-app"
+  ENV                = var.ENV
+  PROJECT            = var.PROJECT
+  PRIVATE_SUBNET_IDS = module.VPC.PRIVATE_SUBNET_IDS
+  VPC_ID             = module.VPC.VPC_ID
+  ALLOW_SG_CIDR      = module.VPC.PRIVATE_SUBNET_CIDR
+  PORT               = 8080
+  COMPONENT          = "catalogue"
+  INSTANCE_TYPE      = "t3.micro"
+  WORKSTATION_IP     = var.WORKSTATION_IP
+  INSTANCE_COUNT     = var.INSTANCE_COUNT["CATALOGUE"]["COUNT"]
+  LB_ARN             = module.LB.PRIVATE_LB_ARN
+}
+
+// MODULE SHIPPING
+module "SHIPPING" {
+  source             = "github.com/dailypractice-all/tf-module-mutable-approach-app"
+  ENV                = var.ENV
+  PROJECT            = var.PROJECT
+  PRIVATE_SUBNET_IDS = module.VPC.PRIVATE_SUBNET_IDS
+  VPC_ID             = module.VPC.VPC_ID
+  ALLOW_SG_CIDR      = module.VPC.PRIVATE_SUBNET_CIDR
+  PORT               = 8080
+  COMPONENT          = "shipping"
+  INSTANCE_TYPE      = "t3.micro"
+  WORKSTATION_IP     = var.WORKSTATION_IP
+  INSTANCE_COUNT     = var.INSTANCE_COUNT["SHIPPING"]["COUNT"]
+  LB_ARN             = module.LB.PRIVATE_LB_ARN
+}
+
+// MODULE USER
+module "USER" {
+  source             = "github.com/dailypractice-all/tf-module-mutable-approach-app"
+  ENV                = var.ENV
+  PROJECT            = var.PROJECT
+  PRIVATE_SUBNET_IDS = module.VPC.PRIVATE_SUBNET_IDS
+  VPC_ID             = module.VPC.VPC_ID
+  ALLOW_SG_CIDR      = module.VPC.PRIVATE_SUBNET_CIDR
+  PORT               = 8080
+  COMPONENT          = "user"
+  INSTANCE_TYPE      = "t3.micro"
+  WORKSTATION_IP     = var.WORKSTATION_IP
+  INSTANCE_COUNT     = var.INSTANCE_COUNT["USER"]["COUNT"]
+  LB_ARN             = module.LB.PRIVATE_LB_ARN
+}
+
+// MODULE PAYMENT
+module "PAYMENT" {
+  source             = "github.com/dailypractice-all/tf-module-mutable-approach-app"
+  ENV                = var.ENV
+  PROJECT            = var.PROJECT
+  PRIVATE_SUBNET_IDS = module.VPC.PRIVATE_SUBNET_IDS
+  VPC_ID             = module.VPC.VPC_ID
+  ALLOW_SG_CIDR      = module.VPC.PRIVATE_SUBNET_CIDR
+  PORT               = 8080
+  COMPONENT          = "payment"
+  INSTANCE_TYPE      = "t3.micro"
+  WORKSTATION_IP     = var.WORKSTATION_IP
+  INSTANCE_COUNT     = var.INSTANCE_COUNT["PAYMENT"]["COUNT"]
+  LB_ARN             = module.LB.PRIVATE_LB_ARN
+}
