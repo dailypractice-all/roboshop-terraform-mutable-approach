@@ -95,5 +95,7 @@ module "FRONTEND" {
   PORT               = 80
   COMPONENT          = "frontend"
   INSTANCE_TYPE      = "t3.micro"
-  WORKSTATION_IP       = var.WORKSTATION_IP
+  WORKSTATION_IP     = var.WORKSTATION_IP
+  INSTANCE_COUNT     = var.INSTANCE_COUNT["FRONTEND"]["COUNT"]
+  LB_ARN             = module.LB.PUBLIC_LB_ARN
 }
