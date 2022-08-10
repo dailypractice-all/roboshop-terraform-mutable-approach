@@ -185,5 +185,5 @@ module "PAYMENT" {
   WORKSTATION_IP     = var.WORKSTATION_IP
   INSTANCE_COUNT     = var.INSTANCE_COUNT["PAYMENT"]["COUNT"]
   LB_ARN             = module.LB.PRIVATE_LB_ARN
-  LB_TYPE             = "private"
+  LB_TYPE             = "private"x`
 }
